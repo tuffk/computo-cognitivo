@@ -1,5 +1,7 @@
 exports.listSysTables = function(ibmdb,connString) {
-    return function(req, res) {
+
+	var d3 = require('d3');
+	return function(req, res) {
 
 	   	   
        ibmdb.open(connString, function(err, conn) {
@@ -7,10 +9,11 @@ exports.listSysTables = function(ibmdb,connString) {
 			 res.send("error occurred " + err.message);
 			}
 			else {
-				conn.query("SELECT FIRST_NAME, LAST_NAME, EMAIL, WORK_PHONE from GOSALESHR.employee FETCH FIRST 10 ROWS ONLY", function(err, tables, moreResultSets) {
-							
-							
-				if ( !err ) { 
+				//conn.query("SELECT FIRST_NAME, LAST_NAME, EMAIL, WORK_PHONE from GOSALESHR.employee FETCH FIRST 10 ROWS ONLY", function(err, tables, moreResultSets) {
+                conn.query("SELECT CUSTOMER, IS_FAILED from DASH11455.BDGMCLEAN", function(err, tables, moreResultSets) {
+
+
+                    if ( !err ) {
 					res.render('tablelist', {
 						"tablelist" : tables,
 						"tableName" : "10 rows from the GOSALESHR.EMPLOYEE table",

@@ -3,6 +3,14 @@ extends layout
 block content
     h1=message
     h2=tableName
+
+    div
+        script(type="text/javascript")
+            d3.select(".chart").selectAll("div")
+            .data(tablelist)
+            .enter()
+            .append("div")
+
     
     form#list-form
       div#main
