@@ -68,6 +68,7 @@ if ( hasConnect == false ) {
 var connString = "DRIVER={DB2};DATABASE=" + db2.db + ";UID=" + db2.username + ";PWD=" + db2.password + ";HOSTNAME=" + db2.hostname + ";port=" + db2.port;
 
 app.get('/', routes.listSysTables(ibmdb,connString));
+app.get('/table2', routes.listSysTables2(ibmdb,connString));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
