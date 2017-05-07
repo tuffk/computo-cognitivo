@@ -1,0 +1,5 @@
+---
+applications:
+ - name: pythonForDashDB
+   random-route: true
+   memory: 128M

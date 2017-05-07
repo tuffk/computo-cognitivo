@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 64M
+  instances: 1
+  domain: mybluemix.net
+  name: jaime1
+  host: jaime1
+  disk_quota: 1024M
+  services:
+  - jaime1-cloudantNoSQLDB
