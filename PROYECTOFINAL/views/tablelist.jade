@@ -6,6 +6,13 @@ block content
 
     h1 Blade Damage
 
+    div
+        script(type="text/javascript").
+            d3.select(".chart").selectAll("div")
+            .data(#{tablelist})
+            .enter()
+            .append("div")
+
     form#list-form
       div#main
         table#list

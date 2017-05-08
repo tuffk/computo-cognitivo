@@ -1,7 +1,7 @@
 /**
  * Created by marcoslopez7 on 5/7/17.
  */
-exports.listSysTables2 = function(ibmdb,connString) {
+exports.tabla = function(ibmdb,connString) {
     return function(req, res) {
 
 
@@ -10,7 +10,7 @@ exports.listSysTables2 = function(ibmdb,connString) {
                 res.send("error occurred " + err.message);
             }
             else {
-                conn.query("", function(err, tables, moreResultSets) {
+                conn.query("SELECT AirlineID, Cancelled, CancelletionCode, TaxiOut, TaxiIn, DepDelay, ArrDelay, WeatherDelay, LateAirCraftDelay from namespace.table FETCH FIRST 100 ROWS ONLY", function(err, tables, moreResultSets) {
 
 
                     if ( !err ) {

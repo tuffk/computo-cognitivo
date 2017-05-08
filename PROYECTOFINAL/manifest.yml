@@ -1,17 +1,17 @@
 ---
 declared-services:
-  dashDB-nodesample:
-    label: dashDB
+  dashdb1:
+    label: dashdb1
     plan: Entry
 applications:
 # replace the host variable below with your own unique one, as this one can be already taken
-- name: dashdbnodesample
+- name: nodejsdash
   memory: 512M
   instances: 1
   path: .
-  host: dashdbnodesample
+  host: nodejsdash
   framework: node
   command:    node app.js
   buildpack:  sdk-for-nodejs
   services:
-  - dashDB-nodesample
+  - dashdb1
