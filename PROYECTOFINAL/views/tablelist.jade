@@ -8,7 +8,7 @@ block content
 
     div#kuz
         script(type="text/javascript").
-            var pie = new d3pie("pieChart", {
+            var pie = new d3pie("kuz", {
                 "header": {
                     "title": {
                         "text": "Vuelos",
@@ -35,148 +35,8 @@ block content
                 },
                 "data": {
                     "sortOrder": "value-desc",
-                    "content": [
-                        {
-                            "label": "JavaScript",
-                            "value": 264131,
-                            "color": "#f30000"
-                        },
-                        {
-                            "label": "Ruby",
-                            "value": 218812,
-                            "color": "#0600f3"
-                        },
-                        {
-                            "label": "Java",
-                            "value": 157618,
-                            "color": "#00b109"
-                        },
-                        {
-                            "label": "PHP",
-                            "value": 114384,
-                            "color": "#14e4b4"
-                        },
-                        {
-                            "label": "Python",
-                            "value": 95002,
-                            "color": "#0fe7fb"
-                        },
-                        {
-                            "label": "C+",
-                            "value": 78327,
-                            "color": "#67f200"
-                        },
-                        {
-                            "label": "C",
-                            "value": 67706,
-                            "color": "#ff7e00"
-                        },
-                        {
-                            "label": "Objective-C",
-                            "value": 36344,
-                            "color": "#8fe4fa"
-                        },
-                        {
-                            "label": "Shell",
-                            "value": 28561,
-                            "color": "#ff5300"
-                        },
-                        {
-                            "label": "Cobol",
-                            "value": 24131,
-                            "color": "#640000"
-                        },
-                        {
-                            "label": "C#",
-                            "value": 100,
-                            "color": "#3854d1"
-                        },
-                        {
-                            "label": "Coldfusion",
-                            "value": 68,
-                            "color": "#d00ed8"
-                        },
-                        {
-                            "label": "Fortran",
-                            "value": 218812,
-                            "color": "#7890ff"
-                        },
-                        {
-                            "label": "Coffeescript",
-                            "value": 157618,
-                            "color": "#01664d"
-                        },
-                        {
-                            "label": "Node",
-                            "value": 114384,
-                            "color": "#04231b"
-                        },
-                        {
-                            "label": "Basic",
-                            "value": 95002,
-                            "color": "#e9f117"
-                        },
-                        {
-                            "label": "Cola",
-                            "value": 36344,
-                            "color": "#f3228e"
-                        },
-                        {
-                            "label": "Perl",
-                            "value": 32170,
-                            "color": "#7ce8ca"
-                        },
-                        {
-                            "label": "Dart",
-                            "value": 28561,
-                            "color": "#ff5300"
-                        },
-                        {
-                            "label": "Go",
-                            "value": 264131,
-                            "color": "#ff5300"
-                        },
-                        {
-                            "label": "Groovy",
-                            "value": 218812,
-                            "color": "#7eff30"
-                        },
-                        {
-                            "label": "Processing",
-                            "value": 157618,
-                            "color": "#9a8cf6"
-                        },
-                        {
-                            "label": "Smalltalk",
-                            "value": 114384,
-                            "color": "#79aff9"
-                        },
-                        {
-                            "label": "Scala",
-                            "value": 95002,
-                            "color": "#bfbfbf"
-                        },
-                        {
-                            "label": "Visual Basic",
-                            "value": 78327,
-                            "color": "#56b510"
-                        },
-                        {
-                            "label": "Scheme",
-                            "value": 67706,
-                            "color": "#00e2f6"
-                        },
-                        {
-                            "label": "Rust",
-                            "value": 36344,
-                            "color": "#ff4141"
-                        },
-                        {
-                            "label": "FoxPro",
-                            "value": 32170,
-                            "color": "#61ff41"
-                        }
-                    ]
+                    "content": tablelist
+
                 },
                 "labels": {
                     "outer": {
