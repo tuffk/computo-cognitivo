@@ -10,11 +10,11 @@ exports.tabla = function(ibmdb,connString) {
                 res.send("error occurred " + err.message);
             }
             else {
-                conn.query("SELECT AirlineID, Cancelled, CancelletionCode, TaxiOut, TaxiIn, DepDelay, ArrDelay, WeatherDelay, LateAirCraftDelay from namespace.table FETCH FIRST 100 ROWS ONLY", function(err, tables, moreResultSets) {
+                conn.query("SELECT AIRLINEID, CANCELLED, CANCELLATIONCODE, TAXIOUT, TAXIIN, DEPDELAY, ARRDELAY, WEATHERDELAY, LATEAIRCRAFTDELAY from DASH11455.DEMORASCLEAN FETCH FIRST 100 ROWS ONLY", function(err, tables, moreResultSets) {
 
 
                     if ( !err ) {
-                        res.render('tablelist', {
+                        res.render('rauleamela', {
                             "tablelist" : tables,
                             "tableName" : "10 rows from the GOSALESHR.EMPLOYEE table",
                             "message": "Congratulations. Your connection to dashDB is successful."
@@ -63,5 +63,5 @@ exports.tabla = function(ibmdb,connString) {
             }
         } );
 
-    }
-}
+    };
+};
